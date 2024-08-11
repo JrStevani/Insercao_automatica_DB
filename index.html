@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Banco de Dados de Animes</title>
+    <link rel="shortcut icon" href="imagens/icon.ico" type="image/x-icon">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+        }
+        main {
+            padding: 15px;
+            margin: -30px auto auto auto;
+            width: 90vw;
+            max-width: 1200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(62, 62, 62, 0.775);
+            border-radius: 8px;
+            text-align: justify;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            * {
+                text-align: justify;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                margin: auto;
+                text-align: center;
+            }
+            main {
+                width: 83vw;
+                margin: -40px auto auto auto;
+            }
+            h1 {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 0.9em;
+            }
+            h3 {
+                font-size: 0.8em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+            
+            img {
+                width: 80vw;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                text-align: center;
+            }
+            main {
+                width: 85vw;
+                margin: -20px auto auto auto;
+            }
+            h1 {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 0.9em;
+            }
+            h3 {
+                font-size: 0.8em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+
+            img {
+                width: 70vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Projeto de Banco de Dados de Animes</h1>
+        <p>Este projeto tem como objetivo principal criar e gerenciar um banco de dados MySQL para armazenar informações detalhadas sobre animes. Abaixo estão as principais funcionalidades implementadas neste projeto:</p>
+        
+        <h2>Banco de dados</h2>
+        <div><img src="imagens/php_myadmin_dados.PNG" alt="Tela Inicial do Projeto" class="project-image"></div>
+
+        <ul>
+            <li><strong>Conexão com MySQL</strong>: Estabelecimento de uma conexão segura com o banco de dados MySQL utilizando a biblioteca <code>mysql.connector</code>.</li>
+            <li><strong>Criação de Tabela</strong>: Verificação e criação da tabela <code>animes</code> no banco de dados, contendo colunas para armazenar o nome, descrição, linguagem, gêneros, imagem e temporadas/episódios dos animes.</li>
+            <li><strong>Leitura de Arquivos JSON</strong>: Leitura e processamento de arquivos JSON contendo informações dos animes, como gêneros e temporadas/episódios.</li>
+            <li><strong>Inserção de Dados</strong>: Inserção dos dados lidos nos arquivos JSON na tabela <code>animes</code> do banco de dados.</li>
+            <li><strong>Contagem de Animes</strong>: Cálculo e exibição do total de animes inseridos na tabela.</li>
+        </ul>
+
+        <h2>Detalhamento das Funções</h2>
+        <h3>1. Conexão com o Banco de Dados</h3>
+        <p>O projeto começa estabelecendo uma conexão com o banco de dados MySQL utilizando as credenciais fornecidas, como host, usuário, senha e nome do banco de dados.</p>
+
+        <h3>2. Criação da Tabela de Animes</h3>
+        <p>Em seguida, o código verifica se a tabela <code>animes</code> já existe no banco de dados. Caso contrário, ela é criada com colunas que incluem ID, nome, descrição, linguagem, gêneros, imagem, e temporadas/episódios.</p>
+        <img src="imagens/extrutura.PNG" alt="Extrutura do banco de dados">
+
+        <h3>3. Leitura e Processamento de Arquivos JSON</h3>
+        <p>O script percorre diretórios específicos onde estão armazenados os arquivos JSON contendo informações sobre os animes. Esses arquivos são lidos, e os dados são extraídos e processados para serem inseridos no banco de dados.</p>
+
+        <h3>4. Inserção de Dados no Banco de Dados</h3>
+        <p>Após a leitura dos dados, eles são inseridos na tabela <code>animes</code> no banco de dados, utilizando comandos SQL de inserção.</p>
+
+        <h3>5. Finalização e Contagem de Animes</h3>
+        <p>Finalmente, a conexão com o banco de dados é fechada, e o total de animes inseridos é exibido.</p>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li><strong><a href="https://www.python.org/" target="_blank">Python</a></strong>: Linguagem principal de programação utilizada para todo o desenvolvimento do projeto.</li>
+            <li><strong><a href="https://dev.mysql.com/doc/connector-python/en/" target="_blank">MySQL Connector</a></strong>: Biblioteca utilizada para a conexão e manipulação do banco de dados MySQL.</li>
+            <li><strong><a href="https://docs.python.org/3/library/json.html" target="_blank">JSON</a></strong>: Módulo utilizado para a leitura e manipulação dos arquivos JSON.</li>
+            <li><strong><a href="https://docs.python.org/3/library/os.html" target="_blank">Os</a></strong>: Módulo usado para operações relacionadas ao sistema operacional, como verificação da existência de arquivos e diretórios.</li>
+        </ul>
+    </main>
+</body>
+</html>
