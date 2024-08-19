@@ -13,6 +13,14 @@
             color: #333;
             padding: 15px;
         }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
         main {
             padding: 15px;
             margin: -30px auto auto auto;
@@ -52,6 +60,21 @@
             text-decoration: underline;
             color: #333;
         }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer > p {
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
             * {
                 text-align: justify;
@@ -110,6 +133,10 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1>Banco de dados</h1>
+        <p>Projeto de inserção automática de dados em banco de dados.</p>
+    </header>
     <main>
         <h1>Projeto de Banco de Dados de Animes</h1>
         <p>Este projeto tem como objetivo principal criar e gerenciar um banco de dados MySQL para armazenar informações detalhadas sobre animes. Abaixo estão as principais funcionalidades implementadas neste projeto:</p>
@@ -150,5 +177,8 @@
             <li><strong><a href="https://docs.python.org/3/library/os.html" target="_blank">Os</a></strong>: Módulo usado para operações relacionadas ao sistema operacional, como verificação da existência de arquivos e diretórios.</li>
         </ul>
     </main>
+    <footer>
+        <p>&copy; 2024 Projeto Banco de dados. por Jr.Stevani.</p>
+    </footer>
 </body>
 </html>
